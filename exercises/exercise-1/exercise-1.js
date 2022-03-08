@@ -10,4 +10,4 @@ function introduceYourself(___________________________) {
   );
 }
 
-introduceYourself(personOne);
+introduceYourself(({ name, age, favouriteFood } = personOne));

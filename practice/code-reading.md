@@ -16,6 +16,8 @@ Take a look at the following code:
 
 Explain why line 4 and line 6 output different numbers.
 
+Line 4 is a variable defined within the function (local) scope. Line 7 is a global variable defined in line 1
+
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +36,8 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+This code will give us an error 'y is not defined' because the last line's variable is defined locally within this function and has no access to it
 
 ## Question 3
 
@@ -62,3 +66,11 @@ console.log(y);
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+
+The output of this code is :
+9
+{ x: 10 }
+
+The first line returns a number 9 because y is declared with the number 9. Even though the function is executed and number is incremented in the function, the console logger is still referring to the original value and not the value executed by the function.
+
+The second line return an object with key x and value 10. Here the function increments the value by 1. Objects are mutable data types. In this case the function incremented the value of the original object.
